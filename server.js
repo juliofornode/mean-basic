@@ -6,7 +6,7 @@ var app = express()
 app.use(bodyParser.json())
 
 app.get('/', function(req, res) {
-	res.send('Hola mamon!')
+	res.sendfile('./layouts/posts.html')
 })
 
 app.get('/api/posts', function(req, res, next) {

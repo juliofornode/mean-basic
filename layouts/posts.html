@@ -26,29 +26,25 @@
 	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
 	<script>
 	var app = angular.module('app', [])
-	app.controller('PostsCtrl', function($scope) {
-		$scope.posts = [
-			{
-				username: 'Julio',
-				body: 'mastering the basic mean'
-			},
-			{
-				username: 'Mariau',
-				body: 'ora pro novis'
-			}
-		]
-
+	app.controller('PostsCtrl', function($scope, $http) {
+		
+		$http.get('/api/posts')
+		.success(function(posts) {
+			$scope.posts = posts
+		})
+		
 		$scope.addPost = function() {
 			if ($scope.postBody) {
-				var post = {
+				$http.post('/api/posts', {
 					username: 'Belen',
 					body: $scope.postBody
-				}		
-				$scope.posts.unshift(post)
-				$scope.postBody = null
+				})
+				.success(function(post) {	
+					$scope.posts.unshift(post)
+					$scope.postBody = null
+				})
 			}
 		}
-
 	})
 
 	</script>
