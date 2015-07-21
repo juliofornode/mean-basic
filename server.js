@@ -1,5 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var Post = require('./models/post')
 
 var app = express()
 app.use(bodyParser.json())
@@ -8,20 +9,22 @@ app.get('/', function(req, res) {
 	res.send('Hola mamon!')
 })
 
-app.get('/api/posts', function(req, res) {
-  var user = {
-		username: 'Julio',
-		body: 'mastering the basic mean'
-  } 
-  res.json(user)
+app.get('/api/posts', function(req, res, next) {
+  Post.find(function(err, posts) {
+    if (err) { return next(err) }
+    res.json(posts)   
+  })
 })
 
-app.post('/api/posts', function(req, res) {
-  var user = {
+app.post('/api/posts', function(req, res, next) {
+  var post = new Post({
   	username: req.body.username,
   	body: req.body.body
-  } 
-  res.json(user)
+  })
+  post.save(function(err, post) {
+    if (err) { return next(err) }
+    res.json(post)   
+  })
 })
 
 
