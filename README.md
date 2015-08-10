@@ -5,13 +5,11 @@ BASIC MEAN
 ==========
 
 1. START WITH AN HTML & BOOTSTRAP MOCK UP
------------------------------------------
 * Add Bootstrap CSS from CDN
 * We can use available templates
 
 
 2. ADD ANGULAR TO PROTOTYPE THE APP
------------------------------------
 * Add Angular script from CDN
 * Declare ng app
 * Set ng controller and scope
@@ -27,7 +25,6 @@ BASIC MEAN
 
 
 3. SET THE SERVER WITH NODE AND EXPRESS
----------------------------------------
 * npm init
 * Install express and body-parser
 * Create basic server
@@ -36,7 +33,6 @@ BASIC MEAN
 
 
 4. RUN MONGO DEAMON, CREATE DB, USE MONGOOSE TO CONNECT AND CREATE MODEL
-------------------------------------------------------------------------
 * mongod
 * mongo
 * use databaseName
@@ -47,7 +43,6 @@ BASIC MEAN
 
 
 5. MOVE NG TO SERVER AND USE $HTTP TO CONNECT NG THE API
---------------------------------------------------------
 * Move posts.html to /layouts/posts.html
 * $http.get('path').success(function(posts) {
 * $http.post('path', postFields).success(function(post) {
