@@ -3,6 +3,8 @@ BASIC MEAN STACK PROJECT:
 SIMPLE TWITTER
 ===
 
+[Project link](http://salty-lake-3481.herokuapp.com/)
+
 1. Start With an Html & Bootstrap Mock Up
 ---
 * Add Bootstrap CSS from CDN  
@@ -37,7 +39,6 @@ ng-click
 * Check post with curl
 
 
-
 4. Run Mongo Deamon, Create db, use Mongoose to Connect and Create Model
 ---
 * mongod
@@ -47,7 +48,6 @@ ng-click
 * set db connection in db.js
 * define model in models/modelName.js
 * update get/post api with Mongo find/save
-
 
 
 5. Move ng to Server and use $Http to Connect ng the Api
