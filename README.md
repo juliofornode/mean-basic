@@ -1,33 +1,33 @@
-# mean-basic
 
+BASIC MEAN
+===
 
-BASIC MEAN STACK PROJECT: SIMPLE TWITTER
-========================================
-
-1. START WITH AN HTML & BOOTSTRAP MOCK UP
------------------------------------------
+1. Start With an Html & Bootstrap Mock Up
+---
 * Add Bootstrap CSS from CDN
 * We can use available templates
 
 
-2. ADD ANGULAR TO PROTOTYPE THE APP
------------------------------------
+2. Add Angular to Prototype the App
+---
 * Add Angular script from CDN
 * Declare ng app
 * Set ng controller and scope
-  - $scope.posts
-  - $scope.addPost
+```
+$scope.posts
+$scope.addPost
+```
 
 * Add ng directives
-  - ng-app
-  - ng-controller
-  - ng-repeat
-  - ng-model
-  - ng-click
+     > ng-app
+		 > ng-controller
+		 > ng-repeat
+		 > ng-model
+		 > ng-click
 
 
-3. SET THE SERVER WITH NODE AND EXPRESS
----------------------------------------
+3. Set the Server With Node and Express
+---
 * npm init
 * Install express and body-parser
 * Create basic server
@@ -35,8 +35,8 @@ BASIC MEAN STACK PROJECT: SIMPLE TWITTER
 * Check post with curl
 
 
-4. RUN MONGO DEAMON, CREATE DB, USE MONGOOSE TO CONNECT AND CREATE MODEL
-------------------------------------------------------------------------
+4. Run Mongo Deamon, Create db, use Mongoose to Connect and Create Model
+---
 * mongod
 * mongo
 * use databaseName
@@ -46,17 +46,11 @@ BASIC MEAN STACK PROJECT: SIMPLE TWITTER
 * update get/post api with Mongo find/save
 
 
-5. MOVE NG TO SERVER AND USE $HTTP TO CONNECT NG THE API
---------------------------------------------------------
+5. Move ng to Server and use $Http to Connect ng the Api
+---
 * Move posts.html to /layouts/posts.html
 * $http.get('path').success(function(posts) {
 * $http.post('path', postFields).success(function(post) {
-
-
-
-
-
-
 
 
 
