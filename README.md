@@ -33,8 +33,9 @@ ng-click
 * npm init
 * Install express and body-parser
 * Create basic server
-* Create basic get/post api  
+* Create basic get/post api
 * Check post with curl
+
 
 
 4. Run Mongo Deamon, Create db, use Mongoose to Connect and Create Model
@@ -44,8 +45,9 @@ ng-click
 * use databaseName
 * install mongoose
 * set db connection in db.js
-* define model in models/modelName.js  
+* define model in models/modelName.js
 * update get/post api with Mongo find/save
+
 
 
 5. Move ng to Server and use $Http to Connect ng the Api
