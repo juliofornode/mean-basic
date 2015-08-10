@@ -15,15 +15,15 @@ BASIC MEAN STACK PROJECT: SIMPLE TWITTER
 * Add Angular script from CDN
 * Declare ng app
 * Set ng controller and scope
-     	> $scope.posts
-	> $scope.addPost
+  - $scope.posts
+  - $scope.addPost
 
 * Add ng directives
-     	> ng-app
-	> ng-controller
-	 > ng-repeat
-	> ng-model
-	> ng-click
+  - ng-app
+  - ng-controller
+  - ng-repeat
+  - ng-model
+  - ng-click
 
 
 3. SET THE SERVER WITH NODE AND EXPRESS
