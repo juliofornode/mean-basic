@@ -1,7 +1,5 @@
 
-Basic MEAN Stack Project:  
----
-Simple Twitter
+Basic MEAN Stack Project: Simple Twitter
 ===
 
 [Link to live project](http://salty-lake-3481.herokuapp.com/)
