@@ -3,7 +3,7 @@ BASIC MEAN STACK PROJECT:
 SIMPLE TWITTER
 ===
 
-[Project link](http://salty-lake-3481.herokuapp.com/)
+[Link to live project](http://salty-lake-3481.herokuapp.com/)
 
 1. Start With an Html & Bootstrap Mock Up
 ---
