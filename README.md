@@ -50,7 +50,7 @@ ng-click
 * update get/post api with Mongo find/save
 
 
-5. Move ng to Server and use $Http to Connect ng the Api
+5. Move ng to Server and use $http to Connect ng to Node
 ---
 * Move posts.html to /layouts/posts.html
 ```
