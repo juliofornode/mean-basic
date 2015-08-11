@@ -59,7 +59,8 @@ ng-click
 * the page /api/posts will send new tweets to Mongo via POST
 * npm init
 ```
-Very important: maintain versions in packckage.json in order to avoid possible issues with newer versions.
+Very important: maintain versions in packckage.json in order to avoid  
+possible issues with newer versions.
 ```
 
 
