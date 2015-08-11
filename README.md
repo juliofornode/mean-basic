@@ -239,3 +239,108 @@ app.get('/api/posts', function(req, res, next) {
 })
 ```
 
+6. Cleaning Node
+---
+
+BREAK OUT THE API ENDPOINTS INTO A CONTROLLER
+
+* Build up a Router object and use it like an app object
+* var router = require('express').Router()
+* Remove module.exports = function(app) {
+* Replace app by router
+* module.exports = router
+* Finally, in server.js: app.use(require('./controllers/api/posts'))
+
+* One last improvement: namespace the routers
+```
+ > in server.js: 
+ app.use('/api/posts', require('./controllers/api/posts'))
+ 
+ > in /controllers/api/posts.js: 
+ router.get('/', ...
+ router.post('/', ...
+```
+
+
+BREAK OUT THE SENDFILE ENDPOINT INTO A CONTROLLER
+
+* Create /controllers/static.js
+* var router = require('express').Router()
+* Move there the sendFile endpoint from server.js. Important: use sendfile, not sendFile (path not working)
+
+* Replace app by router
+* module.exports = router
+* Finally, in server.js: app.use(require('./controllers/static'))
+```
+ > equivalent to: 
+ app.use('/', require('./controllers/static'))
+```
+
+7. Cleaning Angular
+---
+
+SEPARATE JS FROM HTML
+
+* We do this in development, in production we will use a CDN in front of the application to cache the assets
+
+* Create /assets/app.js
+* Move there the js
+* Require the file from /controllers/static.js
+```
+ > require express and router
+ router.use(express.static(__dirname + '/../assets'))
+```
+
+* Check changes in /app.js : raw js
+* Include script src to /app.js in /layout/posts.html
+
+
+BREAKING ANGULAR INTO SERVICES
+
+* Services are a way to separate your code in components
+* In Angular, a controller is created everytime it is used. Services, on the other hand, are reused.
+
+* Define the service in /assets/app.js
+
+```
+app.service('PostsSvc', function($http) {
+  this.fetch = function() {
+	  return  $http.get('/api/posts')
+	}
+	
+  this.create = function (post) {
+	  return  $http.post('/api/posts', post)
+	}
+	
+})
+```
+
+* Include the service as dependency of the controller:
+```
+app.controller('PostsCtrl', function($scope, PostsSvc) {
+	
+  PostsSvc.fetch()
+  .success(function(posts) {
+    $scope.posts = posts
+  })
+
+  $scope.addPost = function() {
+  	if ($scope.postBody) {
+    	PostsSvc.create({
+        username: 'Belen',
+        body: $scope.postBody
+    	}).success(function(post) {
+        $scope.posts.unshift(post)
+    	  // clear out the input field
+    	  $scope.postBody = null
+      })	      	
+    }
+  }
+})
+
+```
+
+
+
+
+
