@@ -99,11 +99,14 @@ app.post('/api/posts', function(req, res) {
 
 * Check post with curl (alternative: use the Postman app for Chrome)
 ```
-curl -v -H "Content Type: application/json" -XPOST --data   "{\"username\":\"guan\", \"body\": \"asin bonanga\"}"   localhost:3000/api/posts
+curl -v -H "Content Type: application/json" -XPOST --data  
+"{\"username\":\"guan\", \"body\": \"asin bonanga\"}"   
+localhost:3000/api/posts
 
 Alternative:
 
-curl -H "Content Type: application/json" -X POST -d '{ "post":   {"username":"guan", "body": "asin bonanga"} }' localhost:3000/api/posts
+curl -H "Content Type: application/json" -X POST -d '{ "post":   
+{"username":"guan", "body": "asin bonanga"} }' localhost:3000/api/posts
 ```
 
 
