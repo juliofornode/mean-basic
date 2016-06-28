@@ -4,12 +4,32 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<style>
+
+		::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			color:    red !important;
+		}
+
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color:    red !important;
+			opacity:  1;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color:    red !important;
+			opacity:  1;
+		}
+
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color:    red !important;
+		}
+	</style>
 </head>
 
 <body ng-app='app'>
 	<div ng-controller='PostsCtrl' class='container'>
-		<h1 style="font-family: 'Lobster', cursive; color: red; font-size: 300px; text-align: center;"></span>Tweet!</h1>
-		<p style="font-size: 20px; color: red; text-align: center; position: relative; bottom: 30px;">Node.js | Express.js | Mongo.db | Mongoose | Angular.js | Bootstrap | Google Fonts </p>
+		<h1 style="font-family: 'Lobster', cursive; color: red; font-size: 300px; text-align: center;"></span>Tweety!</h1>
+		<p style="font-size: 16px; color: red; text-align: center; position: relative; bottom: 30px; right: 100px;">Node.js | Express.js | Mongo.db | Mongoose | Angular.js | Bootstrap | Google Fonts </p>
 
 		<div class="input-group">
       <input ng-model='postBody' type="text" class="form-control" placeholder="Enter tweet..." style="border-color: red;">
@@ -19,7 +39,7 @@
     </div>
 
 		<ul class="list-group">
-		  <li ng-repeat="post in posts | orderBy:'-date'" class="list-group-item" style="background-color: pink; border-color: white;">
+		  <li ng-repeat="post in posts | orderBy:'-date'" class="list-group-item" style="background-color: #ff80bb; border-color: white; color: white;">
 		  	<strong>@{{ post.username }}</strong>
 		  	<span>{{ post.body }}</span>
 		  </li>
