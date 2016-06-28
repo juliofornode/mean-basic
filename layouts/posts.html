@@ -3,21 +3,23 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 
 <body ng-app='app'>
 	<div ng-controller='PostsCtrl' class='container'>
-		<h1>Recent Posts</h1>
+		<h1 style="font-family: 'Lobster', cursive; color: red; font-size: 300px; text-align: center;"></span>Tweet!</h1>
+		<p style="font-size: 20px; color: red; text-align: center; position: relative; bottom: 30px;">Node.js | Express.js | Mongo.db | Mongoose | Angular.js | Bootstrap | Google Fonts </p>
 
 		<div class="input-group">
-      <input ng-model='postBody' type="text" class="form-control" placeholder="Enter tweet...">
+      <input ng-model='postBody' type="text" class="form-control" placeholder="Enter tweet..." style="border-color: red;">
       <span class="input-group-btn">
-        <button ng-click='addPost()' class="btn btn-default" type="button">Go!</button>
+        <button ng-click='addPost()' class="btn btn-primary" type="button" style="background-color: red; border-color: red;">Go!</button>
       </span>
     </div>
 
 		<ul class="list-group">
-		  <li ng-repeat="post in posts | orderBy:'-date'" class="list-group-item">
+		  <li ng-repeat="post in posts | orderBy:'-date'" class="list-group-item" style="background-color: pink; border-color: white;">
 		  	<strong>@{{ post.username }}</strong>
 		  	<span>{{ post.body }}</span>
 		  </li>

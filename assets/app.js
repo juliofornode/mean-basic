@@ -19,7 +19,7 @@ app.controller('PostsCtrl', function($scope, $http) {
 	$scope.addPost = function() {
 		if ($scope.postBody) {
 			$http.post('/api/posts', {
-				username: 'Belen',
+				username: 'Tweety',
 				body: $scope.postBody
 			})
 			.success(function(post) {	
@@ -28,5 +28,15 @@ app.controller('PostsCtrl', function($scope, $http) {
 			})
 		}
 	}
+
+	var colors = [
+			'pink',
+			'yellow'
+	];
+
+	$scope.color = colors[Math.floor(Math.random()*colors.length)];
+
+
+
 })
 
